@@ -64,20 +64,10 @@ export const Bio = {
           name: "Firebase",
           image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
         },
-      ],
-    },
-    {
-      title: "Android",
-      skills: [
         {
           name: "Java",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-        },
-        {
-          name: "XML",
-          image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
         },
       ],
     },
