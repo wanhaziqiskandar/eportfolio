@@ -42,8 +42,9 @@ function App() {
           <Expertise/>
           <br/>
           <Experience/>
-          <Education/>
+          <br/>
           <Projects/>
+          <Education/>
         </Wrapper>
       </Body>
       </Route>

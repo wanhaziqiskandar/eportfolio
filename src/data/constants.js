@@ -74,6 +74,10 @@ export const Bio = {
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
         },
+        {
+          name: "PHP",
+          image: "https://www.svgrepo.com/show/303656/php-logo.svg",
+        }
       ],
     },
     {
@@ -125,7 +129,7 @@ export const Bio = {
       company: 'Telekom Malaysia Research and Development',
       role: 'Software Engineer Intern',
       desc: 'Working as a Backend Developer Intern on revamping an old system by converting legacy Bash scripts into Python. This involves integrating the new scripts into Apache Airflow DAGs for better automation and scheduling, facilitating a smoother migration process.',
-      date: 'July 2024 - September 2024',
+      date: 'Date: July 2024 - September 2024',
       skills: ['Docker', 'Python', 'Airflow', 'VSCode'],
       logo: 'https://upload.wikimedia.org/wikipedia/commons/6/68/TM_Research_and_Development_Logo.png', // Add company logo here
     },
