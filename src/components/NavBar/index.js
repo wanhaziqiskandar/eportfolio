@@ -89,52 +89,40 @@ export const NavLink = styled.a`
 `;
 
 export const GitHubButton = styled.a`
-  border: 2px solid ${({ theme }) => theme.primary};
-  display: flex;
-  align-items: center;
-  height: 50px; /* Adjust the height for better proportion */
-  border-radius: 25px; /* Make it fully rounded */
-  color: ${({ theme }) => theme.primary};
-  cursor: pointer;
-  padding: 0 20px;
-  font-weight: 600; /* Slightly bolder text */
-  text-decoration: none;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-
-  /* Hover state */
-  &:hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.white};
-    border-color: ${({ theme }) => theme.primary}; /* Ensure border matches background */
-  }
-
-  /* Active (Click) state */
-  &:active {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.white};
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2); /* Create a pressed effect */
-    transform: scale(0.98); /* Slightly scale down when clicked */
-  }
-
-  /* Adding an icon space */
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* Add space between text and icon */
-  gap: 8px;
+  padding: 12px 20px;
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.secondary};
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 640px) {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
 `;
 
 export const GitHubIcon = styled(FaGithub)`
-  font-size: 20px; /* Adjust icon size */
-  color: ${({ theme }) => theme.primary}; /* Match the icon color with the button */
+  font-size: 22px;
+  color: ${({ theme }) => theme.white}; 
   transition: color 0.3s ease-in-out;
 
   ${GitHubButton}:hover & {
-    color: ${({ theme }) => theme.white}; /* Change icon color on hover */
+    color: ${({ theme }) => theme.accent}; /* Change icon color on hover */
   }
+
+  margin-right: 8px; /* Space between icon and text */
 `;
 
 

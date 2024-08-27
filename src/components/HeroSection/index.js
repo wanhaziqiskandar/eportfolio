@@ -166,66 +166,66 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  width: 95%;
+  width: 100%;
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
   color: ${({ theme }) => theme.white};
-  border-radius: 20px;
+  border-radius: 25px; /* Slightly rounder corners for a modern look */
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
-  transition: all 0.2s ease-in-out !important;
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  background: linear-gradient(135deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1); /* Softer shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
 
   &:hover {
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow: 20px 20px 60px #1F2634;
-    filter: brightness(1);
+    transform: translateY(-5px) scale(1.05); /* Slight lift on hover */
+    background: linear-gradient(135deg, hsla(294, 100%, 50%, 1) 0%, hsla(271, 100%, 50%, 1) 100%); /* Inverse gradient for hover */
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2); /* Enhanced shadow effect */
+    filter: brightness(1.1); /* Slight brightness to make the button pop */
   }
 
   @media (max-width: 640px) {
-    padding: 12px 0;
+    padding: 14px 0;
     font-size: 18px;
+    max-width: 100%; /* Ensure it fits smaller screens */
   }
 `;
+
 
 export const LinkedInButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  width: 95%;
+  width: 100%;
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
   color: ${({ theme }) => theme.white};
-  border-radius: 20px;
+  border-radius: 25px; /* Rounder corners for consistency */
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
-  transition: all 0.2s ease-in-out !important;
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  background: linear-gradient(135deg, hsla(207, 100%, 50%, 1) 0%, hsla(220, 80%, 60%, 1) 100%);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow: 20px 20px 60px #1F2634;
-    filter: brightness(1);
+    transform: translateY(-5px) scale(1.05); /* Similar lift effect as the ResumeButton */
+    background: linear-gradient(135deg, hsla(220, 80%, 60%, 1) 0%, hsla(207, 100%, 50%, 1) 100%); /* Gradient reverse on hover */
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2); /* Stronger shadow on hover */
+    filter: brightness(1.1); /* Slight brightness increase */
   }
 
   @media (max-width: 640px) {
-    padding: 12px 0;
+    padding: 14px 0;
     font-size: 18px;
+    max-width: 100%; /* Ensures full width on smaller screens */
   }
 `;
+
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -246,7 +246,7 @@ const HeroSection = () => {
           </HeroBg>
           <HeroInnerContainer>
             <HeroLeftContainer id="Left">
-              <Title>Hi, I am <br /> {Bio.name}</Title>
+              <Title>Hi, my name is <br /> {Bio.name}</Title>
               <TextLoop>
                 I am a
                 <Span>
