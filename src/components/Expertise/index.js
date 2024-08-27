@@ -25,7 +25,7 @@ gap: 12px;
 }
 `
 
-export const Title = styled.div`
+const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
@@ -37,7 +37,7 @@ margin-top: 12px;
   }
 `;
 
-export const Desc = styled.div`
+const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -119,7 +119,7 @@ const SkillImage = styled.img`
 
 const Expertise = () => {
     return (
-      <Container id="skills">
+      <Container id="expertise">
         <Wrapper>
           <Title>Skills</Title>
           <Desc>Here are some of my skills on which I have been working on for the past 3 years in University and during 3 months Internship.

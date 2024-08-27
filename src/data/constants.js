@@ -165,16 +165,16 @@ export const Bio = {
   export const projects = [
     {
       id: 0,
-      title: "Esport Tournament Management System",
+      title: "Rural Library Management System",
       description:
         "Developed a web-based platform with self-registration functionality and automated event information management, eliminating paper-based processes and improving overall efficiency",
       tags: [
        "HTML",
         "CSS",
-        "JavaScript",
         "PHP",
         "MySQL",
         "Bootstrap",
+        "Laravel",
       ],
       category: "web app",
       github: "https://github.com/wanhaziqiskandar/FinalProject",
