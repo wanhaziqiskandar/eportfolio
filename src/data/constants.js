@@ -41,6 +41,10 @@ export const Bio = {
             "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         },
         {
+          name: ".NET",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/684px-Microsoft_.NET_logo.svg.png",
+        },
+        {
           name: "Bootstrap",
           image:
             "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
