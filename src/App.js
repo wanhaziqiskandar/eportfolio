@@ -7,6 +7,8 @@ import Hero from './components/HeroSection';
 import Expertise from './components/Expertise';
 import Education from './components/Education';
 import { BrowserRouter as Route} from 'react-router-dom';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -38,7 +40,10 @@ function App() {
         <Hero />
         <Wrapper>
           <Expertise/>
+          <br/>
+          <Experience/>
           <Education/>
+          <Projects/>
         </Wrapper>
       </Body>
       </Route>

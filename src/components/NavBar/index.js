@@ -340,7 +340,7 @@ const NavBar = () => {
           <NavItems>
             <NavLink href='#about'>About</NavLink>
             <NavLink href='#expertise'>Expertise</NavLink>
-            <NavLink href='#experience'>Experience</NavLink>
+            <NavLink href='#experiences'>Experience</NavLink>
             <NavLink href='#projects'>Projects</NavLink>
             <NavLink href='#education'>Education</NavLink>
           </NavItems>

@@ -1,12 +1,10 @@
 import React from 'react';
-// import HeroBgAnimation from '../HeroBgAnimation';
-// Ensure these imports are correct and used
-// import HeroImg from '../../images/HeroImage.jpg';
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 import styled from 'styled-components';
 
-
+// Ensure these imports are correct and the image path is accurate
+import HeroImg from '../../assets/HeroImages/hero-image.jpg'; 
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -67,7 +65,7 @@ export const HeroLeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
   }
   @media (max-width: 640px) {
     order: 2;
@@ -75,7 +73,7 @@ export const HeroLeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
   }
 `;
 
@@ -98,21 +96,31 @@ export const HeroRightContainer = styled.div`
 
 export const Img = styled.img`
   position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 100%;
+  max-height: 400px; // Constrain height
+  width: auto; // Maintain aspect ratio
+  height: auto; // Maintain aspect ratio
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
-  @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 400px;
+  border: 4px solid ${({ theme }) => theme.primary};
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; // Preserve aspect ratio
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   }
+  
+  @media (max-width: 768px) {
+    max-height: 320px; // Adjust height for smaller screens
+  }
+
   @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
+    max-height: 240px; // Adjust height for smaller screens
   }
 `;
+
+
 
 export const Title = styled.div`
   font-weight: 700;
@@ -173,28 +181,27 @@ export const ResumeButton = styled.a`
   text-align: center;
   padding: 16px 0;
   color: ${({ theme }) => theme.white};
-  border-radius: 25px; /* Slightly rounder corners for a modern look */
+  border-radius: 25px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   background: linear-gradient(135deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1); /* Softer shadow for depth */
-  transition: all 0.3s ease-in-out; /* Smooth transitions */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: translateY(-5px) scale(1.05); /* Slight lift on hover */
-    background: linear-gradient(135deg, hsla(294, 100%, 50%, 1) 0%, hsla(271, 100%, 50%, 1) 100%); /* Inverse gradient for hover */
-    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2); /* Enhanced shadow effect */
-    filter: brightness(1.1); /* Slight brightness to make the button pop */
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, hsla(294, 100%, 50%, 1) 0%, hsla(271, 100%, 50%, 1) 100%);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.1);
   }
 
   @media (max-width: 640px) {
     padding: 14px 0;
     font-size: 18px;
-    max-width: 100%; /* Ensure it fits smaller screens */
+    max-width: 100%;
   }
 `;
-
 
 export const LinkedInButton = styled.a`
   appearance: button;
@@ -204,75 +211,73 @@ export const LinkedInButton = styled.a`
   text-align: center;
   padding: 16px 0;
   color: ${({ theme }) => theme.white};
-  border-radius: 25px; /* Rounder corners for consistency */
+  border-radius: 25px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   background: linear-gradient(135deg, hsla(207, 100%, 50%, 1) 0%, hsla(220, 80%, 60%, 1) 100%);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1); /* Soft shadow for depth */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: translateY(-5px) scale(1.05); /* Similar lift effect as the ResumeButton */
-    background: linear-gradient(135deg, hsla(220, 80%, 60%, 1) 0%, hsla(207, 100%, 50%, 1) 100%); /* Gradient reverse on hover */
-    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2); /* Stronger shadow on hover */
-    filter: brightness(1.1); /* Slight brightness increase */
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, hsla(220, 80%, 60%, 1) 0%, hsla(207, 100%, 50%, 1) 100%);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.1);
   }
 
   @media (max-width: 640px) {
     padding: 14px 0;
     font-size: 18px;
-    max-width: 100%; /* Ensures full width on smaller screens */
+    max-width: 100%;
   }
 `;
 
-
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 12px; /* Adjust spacing between buttons as needed */
-  margin-top: 20px; /* Add spacing above the button container */
+  gap: 12px;
+  margin-top: 20px;
   @media (max-width: 640px) {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    flex-direction: column;
     gap: 10px;
   }
 `;
 
 const HeroSection = () => {
-    return (
-      <div id="about">
-        <HeroContainer>
-          <HeroBg>
-            {/* <HeroBgAnimation /> */}
-          </HeroBg>
-          <HeroInnerContainer>
-            <HeroLeftContainer id="Left">
-              <Title>Hi, my name is <br /> {Bio.name}</Title>
-              <TextLoop>
-                I am a
-                <Span>
-                  <Typewriter
-                    options={{
-                      strings: Bio.roles,
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </Span>
-              </TextLoop>
-              <SubTitle>{Bio.description}</SubTitle>
-              <ButtonContainer>
-                <ResumeButton href={Bio.resume} target="_blank">Check Resume</ResumeButton>
-                <LinkedInButton href={Bio.linkedin} target="_blank">LinkedIn</LinkedInButton>
-              </ButtonContainer>
-            </HeroLeftContainer>
-            <HeroRightContainer id="Right">
-              {/* <Img src={HeroImg} alt="hero-image" /> */}
-            </HeroRightContainer>
-          </HeroInnerContainer>
-        </HeroContainer>
-      </div>
-    );
-  };
-  
-  export default HeroSection;
-  
+  return (
+    <div id="about">
+      <HeroContainer>
+        <HeroBg>
+          {/* <HeroBgAnimation /> */}
+        </HeroBg>
+        <HeroInnerContainer>
+          <HeroLeftContainer id="Left">
+            <Title>Hi, my name is <br /> {Bio.name}</Title>
+            <TextLoop>
+              I am a
+              <Span>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Span>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+            <ButtonContainer>
+              <ResumeButton href={Bio.resume} target="_blank">Check Resume</ResumeButton>
+              <LinkedInButton href={Bio.linkedin} target="_blank">LinkedIn</LinkedInButton>
+            </ButtonContainer>
+          </HeroLeftContainer>
+          <HeroRightContainer id="Right">
+            <Img src={HeroImg} alt="hero-image" /> {/* Display image on the right */}
+          </HeroRightContainer>
+        </HeroInnerContainer>
+      </HeroContainer>
+    </div>
+  );
+};
+
+export default HeroSection;

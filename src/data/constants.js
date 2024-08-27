@@ -121,18 +121,13 @@ export const Bio = {
   
   export const experiences = [
     {
-      id: 0,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
-      role: "Backend Developer Intern",
-      company: "Telekom Research And Development",
-      date: "July 2024 - September 2024",
-      desc: "Working in migration where I converted scripts from Bash to Python and using Airflow DAGs to automate process.",
-      skills: [
-        "Docker",
-        "Python",
-        "Airflow",
-        "VS Code",
-      ],
+      id: 1,
+      company: 'Telekom Malaysia Research and Development',
+      role: 'Software Engineer Intern',
+      desc: 'Working as a Backend Developer Intern on revamping an old system by converting legacy Bash scripts into Python. This involves integrating the new scripts into Apache Airflow DAGs for better automation and scheduling, facilitating a smoother migration process.',
+      date: 'July 2024 - September 2024',
+      skills: ['Docker', 'Python', 'Airflow', 'VSCode'],
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/68/TM_Research_and_Development_Logo.png', // Add company logo here
     },
   ];
   
