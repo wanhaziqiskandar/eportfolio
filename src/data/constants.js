@@ -77,7 +77,16 @@ export const Bio = {
         {
           name: "PHP",
           image: "https://www.svgrepo.com/show/303656/php-logo.svg",
-        }
+        },
+        {
+          name: "Laravel",
+          image: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
+        },
+        {
+          name: "Airflow DAGs",
+          image:
+            "https://miro.medium.com/v2/resize:fit:828/format:webp/1*BEGGWVM2rQx438Fevmz1Fw.png",
+        },
       ],
     },
     {
@@ -114,11 +123,7 @@ export const Bio = {
             // "https://www.iconfinder.com/icons/7564187/figma_logo_brand_icon.png",
             "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png"
         },
-        {
-          name: "Airflow DAGs",
-          image:
-            "https://miro.medium.com/v2/resize:fit:828/format:webp/1*BEGGWVM2rQx438Fevmz1Fw.png",
-        },
+       
       ],
     },
   ];
@@ -177,5 +182,18 @@ export const Bio = {
       ],
       category: "web app",
       github: "https://github.com/wanhaziqiskandar/FinalProject",
+    },
+    {
+      id: 1,
+      title: "E-Portfolio",
+      description:
+        "A dynamic web application designed to help users create, customize, and showcase their portfolios online. Built with React, JavaScript, and CSS, this application offers a user-friendly interface for displaying personal and professional work. Users can easily share their portfolios and present their skills and achievements effectively. Check out the project's code on GitHub for more details and contributions.",
+      tags: [
+       "ReactJs",
+        "JavaScript",
+        "CSS",
+      ],
+      category: "web app",
+      github: "https://github.com/wanhaziqiskandar/eportfolio",
     },
   ];

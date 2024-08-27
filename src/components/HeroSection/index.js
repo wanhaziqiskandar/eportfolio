@@ -120,8 +120,6 @@ export const Img = styled.img`
   }
 `;
 
-
-
 export const Title = styled.div`
   font-weight: 700;
   font-size: 50px;
@@ -252,7 +250,14 @@ const HeroSection = () => {
         </HeroBg>
         <HeroInnerContainer>
           <HeroLeftContainer id="Left">
-            <Title>Hi, my name is <br /> {Bio.name}</Title>
+            <Title>Hi, my name is <br /> <Typewriter
+              options={{
+                strings: [Bio.name],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+              }}
+            /></Title>
             <TextLoop>
               I am a
               <Span>
