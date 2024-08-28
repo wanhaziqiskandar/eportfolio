@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const FooterContainer = styled.footer`
-  background-color: white;
-  color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.bg};  // Use theme background color
+  color: ${({ theme }) => theme.text_secondary};  // Use theme text color
   text-align: center;
   padding: 20px 10px;
   position: relative;
@@ -14,22 +14,21 @@ const FooterContainer = styled.footer`
 const FooterText = styled.p`
   margin: 3px 0;
   font-size: 14px;
-  color: black;
+  color: ${({ theme }) => theme.text_secondary};  // Use theme text color
 `;
 
 const FooterTitle = styled.h4`
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: black;
+  color: ${({ theme }) => theme.text_primary};  // Use theme primary text color
 `;
 
 const FooterLink = styled.a`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.primary};  // Use theme primary color
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  color: black;
   &:hover {
     text-decoration: underline;
   }
