@@ -147,14 +147,14 @@ export const Bio = {
   export const education = [
     {
       id: 0,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+      img: "https://upload.wikimedia.org/wikipedia/ms/3/38/Sekolah_Menengah_Kebangsaan_Saujana_Impian.jpg",
       school: "Sekolah Menengah Saujana Impian, Kajang, Selangor",
       date: "January 2015 - December 2019",
       grade: "SPM 2A, 3B+, 2B, 2C",
     },
     {
       id: 1,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+      img: "https://upload.wikimedia.org/wikipedia/en/3/31/International_Islamic_University_Malaysia_emblem.svg",
       school: "International Islamic University Malaysia",
       date: "August 2020 - December 2022",
       grade: "CGPA: 3.62",
@@ -162,7 +162,7 @@ export const Bio = {
     },
     {
       id: 2,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Universiti_Tenaga_Nasional_Logo.png",
       school: "Universiti Tenaga Nasional",
       date: "February 2022 - January 2025",
       grade: "3.68",

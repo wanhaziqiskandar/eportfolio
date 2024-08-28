@@ -122,7 +122,7 @@ const Expertise = () => {
       <Container id="expertise">
         <Wrapper>
           <Title>Skills</Title>
-          <Desc>Here are some of my skills on which I have been working on for the past 3 years in University and during 3 months Internship.
+          <Desc>Here are some of my skills on which I have been working on for the past 3 years in University and during 3 months of Internship.
           </Desc>
           <SkillsContainer>
             {skills.map((skill) => (
