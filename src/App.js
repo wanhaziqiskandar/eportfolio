@@ -9,27 +9,13 @@ import Education from './components/Education';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-
-// Define light and dark themes
-const lightTheme = {
-  primary: '#3498db',  // Blue
-  white: '#fff',       // White
-  text_primary: '#333', // Dark text
-  card_light: '#D3D3D3', // Light background
-  bg: '#fff'           // Background color for light mode
-};
-
-const darkTheme = {
-  primary: '#2980b9',  // Darker blue
-  white: '#eee',       // Light text
-  text_primary: '#f0f0f0', // Light text
-  card_light: '#2c3e50', // Darker background
-  bg: '#1c1c1c'        // Background color for dark mode
-};
+import Footer from './components/Footer';
+import { darkTheme, lightTheme } from './utils/Theme'; // Import themes
 
 // Styled components
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.text_primary}; // Set text color based on theme
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -62,8 +48,6 @@ const ToggleButton = styled.button`
   }
 `;
 
-// const theme = lightTheme; // Default theme
-
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -88,6 +72,7 @@ const App = () => {
             <Projects />
             <Education />
           </Wrapper>
+          <Footer />
         </Body>
       </Router>
     </ThemeProvider>

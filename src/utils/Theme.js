@@ -1,23 +1,22 @@
 export const darkTheme = {
-    bg:"#1C1C27",
-    bgLight: "#1C1E27",
-    primary:"#854CE6",
-    text_primary:"#F2F3F4",
-    text_secondary:"#b1b2b3",
-    card:"#171721",
-    card_light: '#191924',
-    button:"#854CE6",
-    white:"#FFFFFF",
-    black:"#000000",
+    bg: "#3f4469",         // Dark background
+    bgLight: "#1C1E27",    // Slightly lighter dark background
+    primary: "#854CE6",    // Primary color for buttons, highlights
+    text_primary: "#F2F3F4", // Primary text color
+    text_secondary: "#B1B2B3", // Secondary text color
+    card: "#171721",       // Background color for cards
+    card_light: "#191924", // Lighter background for cards
+    button: "#854CE6",     // Button color
+    white: "#FFFFFF",      // White color for general use
+    black: "#000000",      // Black color for general use
 }
 
 export const lightTheme = {
-    bg:"#FFFFFF",
-    bgLight: "#f0f0f0",
-    primary:"#be1adb",
-    text_primary:"#111111",
-    text_secondary:"#48494a",
-    card:"#FFFFFF",
-    button:"#5c5b5b",
+    bg: "#FFFFFF",         // White background
+    bgLight: "#F0F0F0",    // Light gray background for sections or cards
+    primary: "#BE1ADB",    // Primary color for buttons, highlights
+    text_primary: "#111111", // Primary text color (dark gray)
+    text_secondary: "#48494A", // Secondary text color (medium gray)
+    card: "#FFFFFF",       // White background for cards
+    button: "#5C5B5B",     // Button color (gray)
 }
-

@@ -79,9 +79,9 @@ const EducationCard = styled.div`
 `;
 
 const EducationImage = styled.img`
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
   border-radius: 50%;
 `;
 

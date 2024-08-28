@@ -166,7 +166,7 @@ export const Bio = {
       school: "Universiti Tenaga Nasional",
       date: "February 2022 - January 2025",
       grade: "3.68",
-      degree: "Bacheor Degree in Computer Science (Software Engineering)",
+      degree: "Bachelor Degree in Computer Science (Software Engineering)",
     },
   ];
   
