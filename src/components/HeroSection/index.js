@@ -2,21 +2,25 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 import styled from 'styled-components';
+import HeroImg from '../../assets/HeroImages/hero-image.jpg';
 
-// Ensure these imports are correct and the image path is accurate
-import HeroImg from '../../assets/HeroImages/hero-image.jpg'; 
+const spacing = {
+  small: '2px',
+  medium: '4px',
+  large: '8px',
+};
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: calc(${spacing.large} * 10) calc(${spacing.large} * 5);
   @media (max-width: 960px) {
-    padding: 66px 16px;
+    padding: calc(${spacing.large} * 8) calc(${spacing.large} * 2);
   }
   @media (max-width: 640px) {
-    padding: 32px 16px;
+    padding: calc(${spacing.large} * 4) calc(${spacing.large} * 2);
   }
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
@@ -34,13 +38,13 @@ export const HeroBg = styled.div`
   height: 100%;
   max-width: 1360px;
   overflow: hidden;
-  padding: 0 30px;
+  padding: calc(${spacing.medium} * 2);
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   @media (max-width: 960px) {
     justify-content: center;
-    padding: 0 0px;
+    padding: 0;
   }
 `;
 
@@ -61,7 +65,7 @@ export const HeroLeftContainer = styled.div`
   order: 1;
   @media (max-width: 960px) {
     order: 2;
-    margin-bottom: 30px;
+    margin-bottom: calc(${spacing.large} * 4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,11 +73,7 @@ export const HeroLeftContainer = styled.div`
   }
   @media (max-width: 640px) {
     order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-bottom: calc(${spacing.large} * 4);
   }
 `;
 
@@ -82,41 +82,41 @@ export const HeroRightContainer = styled.div`
   display: flex;
   order: 2;
   justify-content: end;
-  gap: 12px;
+  gap: calc(${spacing.large} * 1.5);
   @media (max-width: 960px) {
     order: 1;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: calc(${spacing.large} * 10);
   }
   @media (max-width: 640px) {
-    margin-bottom: 30px;
+    margin-bottom: calc(${spacing.large} * 4);
   }
 `;
 
 export const Img = styled.img`
   position: relative;
   max-width: 100%;
-  max-height: 400px; // Constrain height
-  width: auto; // Maintain aspect ratio
-  height: auto; // Maintain aspect ratio
+  max-height: 400px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
-  border: 4px solid ${({ theme }) => theme.primary};
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: calc(${spacing.small} * 2) solid ${({ theme }) => theme.primary};
+  box-shadow: 0 calc(${spacing.medium} * 2) calc(${spacing.medium} * 4) rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: cover; // Preserve aspect ratio
-  
+  object-fit: cover;
+
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 calc(${spacing.medium} * 4) calc(${spacing.medium} * 8) rgba(0, 0, 0, 0.4);
   }
-  
+
   @media (max-width: 768px) {
-    max-height: 320px; // Adjust height for smaller screens
+    max-height: 320px;
   }
 
   @media (max-width: 640px) {
-    max-height: 240px; // Adjust height for smaller screens
+    max-height: 240px;
   }
 `;
 
@@ -131,7 +131,7 @@ export const Title = styled.div`
   @media (max-width: 640px) {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 8px;
+    margin-bottom: calc(${spacing.large} * 2);
   }
 `;
 
@@ -139,7 +139,7 @@ export const TextLoop = styled.div`
   font-weight: 600;
   font-size: 32px;
   display: flex;
-  gap: 12px;
+  gap: calc(${spacing.large});
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
   @media (max-width: 960px) {
@@ -148,7 +148,7 @@ export const TextLoop = styled.div`
   @media (max-width: 640px) {
     font-size: 22px;
     line-height: 48px;
-    margin-bottom: 16px;
+    margin-bottom: calc(${spacing.large} * 2);
   }
 `;
 
@@ -160,7 +160,7 @@ export const Span = styled.span`
 export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 42px;
+  margin-bottom: calc(${spacing.large} * 6);
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 960px) {
     text-align: center;
@@ -177,25 +177,24 @@ export const ResumeButton = styled.a`
   width: 100%;
   max-width: 300px;
   text-align: center;
-  padding: 16px 0;
+  padding: calc(${spacing.large} * 2);
   color: ${({ theme }) => theme.white};
-  border-radius: 25px;
+  border-radius: calc(${spacing.large} * 3);
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   background: linear-gradient(135deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1);
+  box-shadow: calc(${spacing.large} * 1) calc(${spacing.large} * 2) calc(${spacing.large} * 4) rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: translateY(-5px) scale(1.05);
     background: linear-gradient(135deg, hsla(294, 100%, 50%, 1) 0%, hsla(271, 100%, 50%, 1) 100%);
-    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2);
-    filter: brightness(1.1);
+    box-shadow: calc(${spacing.large} * 2) calc(${spacing.large} * 4) calc(${spacing.large} * 8) rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 640px) {
-    padding: 14px 0;
+    padding: calc(${spacing.large} * 2 - ${spacing.small});
     font-size: 18px;
     max-width: 100%;
   }
@@ -207,25 +206,24 @@ export const LinkedInButton = styled.a`
   width: 100%;
   max-width: 300px;
   text-align: center;
-  padding: 16px 0;
+  padding: calc(${spacing.large} * 2);
   color: ${({ theme }) => theme.white};
-  border-radius: 25px;
+  border-radius: calc(${spacing.large} * 3);
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   background: linear-gradient(135deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1);
+  box-shadow: calc(${spacing.large} * 1) calc(${spacing.large} * 2) calc(${spacing.large} * 4) rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: translateY(-5px) scale(1.05);
-    background: linear-gradient(135deg, hsla(220, 80%, 60%, 1) 0%, hsla(207, 100%, 50%, 1) 100%);
-    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.3), -16px -16px 32px rgba(255, 255, 255, 0.2);
-    filter: brightness(1.1);
+    background: linear-gradient(135deg, hsla(294, 100%, 50%, 1) 0%, hsla(271, 100%, 50%, 1) 100%);
+    box-shadow: calc(${spacing.large} * 2) calc(${spacing.large} * 4) calc(${spacing.large} * 8) rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 640px) {
-    padding: 14px 0;
+    padding: calc(${spacing.large} * 2 - ${spacing.small});
     font-size: 18px;
     max-width: 100%;
   }
@@ -233,11 +231,11 @@ export const LinkedInButton = styled.a`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  gap: calc(${spacing.large});
+  margin-top: calc(${spacing.large} * 2);
   @media (max-width: 640px) {
     flex-direction: column;
-    gap: 10px;
+    gap: calc(${spacing.large});
   }
 `;
 
@@ -250,14 +248,17 @@ const HeroSection = () => {
         </HeroBg>
         <HeroInnerContainer>
           <HeroLeftContainer id="Left">
-            <Title>Hi, my name is <br /> <Typewriter
-              options={{
-                strings: [Bio.name],
-                autoStart: true,
-                loop: true,
-                delay: 75,
-              }}
-            /></Title>
+            <Title>
+              Hi, my name is <br />
+              <Typewriter
+                options={{
+                  strings: [Bio.name],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                }}
+              />
+            </Title>
             <TextLoop>
               I am a
               <Span>

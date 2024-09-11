@@ -157,7 +157,7 @@ export const Bio = {
       img: "https://upload.wikimedia.org/wikipedia/en/3/31/International_Islamic_University_Malaysia_emblem.svg",
       school: "International Islamic University Malaysia",
       date: "August 2020 - November 2021",
-      grade: "CGPA: 3.62",
+      grade: "3.62",
       foundation: "Foundation of Engineering and Computer Science"
     },
     {
