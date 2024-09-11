@@ -213,7 +213,7 @@ export const LinkedInButton = styled.a`
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
-  background: linear-gradient(135deg, hsla(207, 100%, 50%, 1) 0%, hsla(220, 80%, 60%, 1) 100%);
+  background: linear-gradient(135deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease-in-out;
 
