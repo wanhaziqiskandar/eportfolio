@@ -17,6 +17,9 @@ export const lightTheme = {
     primary: "#BE1ADB",    // Primary color for buttons, highlights
     text_primary: "#111111", // Primary text color (dark gray)
     text_secondary: "#48494A", // Secondary text color (medium gray)
-    card: "#FFFFFF",       // White background for cards
+    card: "#FFFFFF", 
+    card_light: "#FFFFFF",
+    white: "#FFFFFF",
+    black: "#FFFFFF",      // White background for cards
     button: "#5C5B5B",     // Button color (gray)
 }
