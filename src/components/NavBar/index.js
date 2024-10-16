@@ -94,7 +94,7 @@ export const GitHubButton = styled.a`
   justify-content: center;
   padding: 12px 20px;
   background-color: ${({ theme }) => theme.primary};
-  color: white;  /* Change text color to white */
+  color: ${({ theme }) => theme.white};
   border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
@@ -112,7 +112,6 @@ export const GitHubButton = styled.a`
     font-size: 16px;
   }
 `;
-
 
 export const GitHubIcon = styled(FaGithub)`
   font-size: 22px;
