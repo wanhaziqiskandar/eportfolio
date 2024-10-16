@@ -178,7 +178,7 @@ export const ResumeButton = styled.a`
   max-width: 300px;
   text-align: center;
   padding: calc(${spacing.large} * 2);
-  color: ${({ theme }) => theme.white};
+  color: white;
   border-radius: calc(${spacing.large} * 3);
   cursor: pointer;
   font-size: 20px;
@@ -207,7 +207,7 @@ export const LinkedInButton = styled.a`
   max-width: 300px;
   text-align: center;
   padding: calc(${spacing.large} * 2);
-  color: ${({ theme }) => theme.white};
+  color: white;
   border-radius: calc(${spacing.large} * 3);
   cursor: pointer;
   font-size: 20px;

@@ -130,8 +130,8 @@ const Education = () => {
               <SchoolName>{edu.school}</SchoolName>
               <Date>{edu.date}</Date>
               {edu.grade && <Grade>Grade: {edu.grade}</Grade>}
-              {edu.foundation && <Degree>{edu.foundation}</Degree>}
               {edu.degree && <Degree>{edu.degree}</Degree>}
+              {edu.foundation && <Degree>{edu.foundation}</Degree>}
             </EducationCard>
           ))}
         </EducationContainer>

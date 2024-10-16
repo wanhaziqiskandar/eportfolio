@@ -168,6 +168,8 @@ export const Bio = {
       grade: "3.68",
       degree: "Bachelor Degree in Computer Science (Software Engineering)",
     },
+
+    
   ];
   
   export const projects = [
